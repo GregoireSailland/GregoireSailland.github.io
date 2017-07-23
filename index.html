@@ -2,6 +2,9 @@
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 * {	font-family:Arial;
 	color:black;
@@ -64,6 +67,23 @@ div.tab button:hover {
     background-color: #91e9ff;
 }
 div.tab button.active{
+    background-color: #f5fdff;
+}
+div.tab a { 
+	text-decoration:none;
+	color:black;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+div.tab a:hover {
+    background-color: #91e9ff;
+}
+div.tab a.active{
     background-color: #f5fdff;
 }
 .tabcontent {
@@ -214,38 +234,51 @@ h4 b{font-size:18px;text-align:center;font-weight:bolder;}
     width: 300px;
     text-decoration: none;
     font-size: 20px;
-    color: white; 
     border-radius: 0px 5px 5px 0px;
+	vertical-align:middle;
+	white-space:nowrap;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.0),1px 0 3px rgba(0, 0, 0, 0.3),0 0 5px rgba(0, 0, 0, 0.9);
 }
-
+#mySidenav i{
+	margin-right:-30px;vertical-align:middle;
+	margin-bottom:1px;
+	text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+#mySidenav button:hover i{
+}
 #mySidenav button:hover {
     left: 0; 
 }
 
-
-#sidetab_abouten {
-    top: 20px;
-    background-color: #4CAF50;
+/* red #e94234		yellow #fabb04		green #33a752		blue #4184f3*/
+#sidetab_cv_en {
+    top: 20px;color: white; 
+    background-color: #e94234;/*#4CAF50;*/
 }
-#sidetab_aboutfr {
-    top: 80px;
-    background-color: #4CAF50;
+#sidetab_cv_fr {
+    top: 80px;color: white; 
+    background-color: #e94234;/*#4CAF50;*/
 }
 #sidetab_portfolio {
-    top: 140px;
-    background-color: #2196F3; 
+    top: 140px;	color:white;
+    background-color: #fabb04;/*#2196F3; */
 }
 
+#sidetab_calendar {
+    top: 200px;color: white; 
+    background-color: #33a752;*/#2196F3; */
+}
 #sidetab_why {
-    top: 200px;
-    background-color: #f44336; 
+    top: 260px;color: white; 
+    background-color: #4184f3;/*#f44336; */
 }
 
 #sidetab_hire {
-    top: 260px;
-    background-color: #555 
+    top: 320px;color: white;
+    background-color: #4184f3;/*#555 */
 }
-
+#why{text-align:justify;}
+hr{border:0;border-top:1px solid #555;margin:0;height:1px;}
 </style>
 <style media="print">
 body{background-color:white;}
@@ -261,6 +294,7 @@ html{padding-bottom:0px;}
   <button class="tablinks active" onclick="openTab(event, 'en')" id="defaultOpen">English</button>
   <button class="tablinks" onclick="openTab(event, 'fr')">Français</button>
   <button class="tablinks" onclick="openTab(event, 'portfolio')">Portfolio</button>
+   <a class="tablinks" href="./calendar.html">Calendar</a>
   <button class="tablinks" onclick="openTab(event, 'why')">Why should I work for you?</button>
   <button class="tablinks" onclick="openTab(event, 'hire')">Hire me!</button>
 </div>
@@ -573,7 +607,10 @@ places and for teatchers to manage there resources.</p>
 			<p>The design is not really good because I did it a long time ago at 
 my begining of studies and the purpose was more the usability and the 
 original purpose.</p>
-			<p>Today I could do really better work.</p>
+			<p>Today I could do really better work.<br>
+			see exemple here:<a href="./calendar.html"><button class="sidetablinks"style="padding:6px;" id="sidetab_calendar">Calendar &nbsp;
+  <i class="material-icons" style="vertical-align:middle;">today</i>
+  </button></a></p>
 	  </div>
 	</div>
 	<div class="card" target="_blank">
@@ -603,6 +640,15 @@ original purpose.</p>
 		</div>
 	</div>
 </div>
+
+<div id="calendar" class="tabcontent">
+	
+	
+	
+	
+	
+</div>
+
 <div id="why" class="tabcontent" style="padding:20px;">
 <p>Google Calendar idea exemple</p>
 <img src="./design01.jpg" style="width:100%;">
@@ -621,7 +667,7 @@ Working with Google teams will allow me to learn more and create better than sol
 I have not studied schooling in the field of programming and therefore do not have a network allowing me to exchange on development.<br>
 I only have my strengths, my ingenuity, my passion and the search engines to evolve in this field.
 </p><br>
-<p>I am very versatile, almost too much. This allowed me to bounce back in my car when it was time for me to change jobs and move into very different occupations.<br>
+<p>I am very versatile, almost too much. This allowed me to bounce back when it was time for me to change jobs and move into very different occupations.<br>
 I am no longer satisfied with these small jobs and I now wish to specialize in development.<br>
 I do not see these past experiences as a waste of time because they taught me a lot about myself and I developed very appreciable qualities.<br>
 In each of my development projects, there is a bit of the waiter, a bit of the painter, a bit of the carpenter, a bit of the cook and a little bit of the child who dreams.
@@ -629,23 +675,27 @@ In each of my development projects, there is a bit of the waiter, a bit of the p
 
 
 
+<br>
+
+<hr/>
+
+<br>
+<br>
 
 
-
-
-
+<p>Mon personnage</p>
 <br><br>
 	<p>Travailler pour Google serait pour moi une immense joie.</p>
 	<p>Je m'investirai entièrement avec pour mission d'apporter aux utilisateurs des outils intuitifs et révolutionnaires.</p>
 	<p>Cela me permettra de mettre mes capacités au service d'un employeur sérieux et stable, de mettre mes compétences en action au sein d'une structure épanouissante.</p>
 	<br>
 	<p>Je travaille très bien seul, mais également en équipe, faisant preuve d'astuce et agissant comme catalyseur synergétique.</p>
-	<p>Développant actuellement en freelance diverses applications, je suis actuellement confronté à la difficulté de projets de trop grande empleur pour être menés à bien en tant qu'individu, accomplissant seul les tâches de designer, programmeur, publicitaire et commercial. <br>Travailler au sein d'équipes Google me permettra d'apprendre plus et de créer mieux qu'en freelance solitaire.</p>
+	<p>Développant actuellement en freelance diverses applications, je suis actuellement confronté à la difficulté de projets de trop grande ampleur pour être menés à bien en tant qu'individu, accomplissant seul les tâches de designer, programmeur, publicitaire et commercial. <br>Travailler au sein d'équipes Google me permettra d'apprendre plus et de créer mieux qu'en freelance solitaire.</p>
 	<br>
 	<p>J'ai besoin d'une structure pour m'épanouir et je n'ai pas actuellement dans ma vie de proches partageant mon intérêt pour le développement d'applications. <br>Je n'ai pas fait d'études scolaires dans le domaine de la programmation et n'ai donc pas de réseau me permettant d'échanger sur le développement.</p>
 	<p>Je n'ai pour seuls atouts que mon ingéniosité, ma passion et les moteurs de recherches pour évoluer dans ce domaine.</p>
 	<br>
-	<p>Je suis très polyvalent, presque trop. Cela m'a permis de rebondir dans ma carière lorsqu'il était temps pour moi de changer d'emploi et de m'orienter vers des métiers très différents. <br>Je ne me contente plus de ces petits emplois et je souhaite à présent me spécialiser dans le développement.</p>
+	<p>Je suis très polyvalent, presque trop. Cela m'a permis de rebondir dans ma carrière lorsqu'il était temps pour moi de changer d'emploi et de m'orienter vers des métiers très différents. <br>Je ne me contente plus de ces petits emplois et je souhaite à présent me spécialiser dans le développement.</p>
 	<p>Je ne vois pas ces expériences passées comme une perte de temps car elles m'ont beaucoup appris sur moi même et j'y ai développé des qualités très appréciables. <br>Dans chacun de mes projets de développement, il y a un peu du serveur, un peu du peintre, un peu du menuisier, un peu du cuisinier et un peu de l'enfant qui rêve.</p>
 
 <br><br><br>
@@ -699,11 +749,23 @@ In each of my development projects, there is a bit of the waiter, a bit of the p
 </div>
 
 <div id="mySidenav" class="sidenav">
-  <button class="sidetablinks" onclick="openTab(event, 'en')" id="sidetab_abouten">English</button>
-  <button class="sidetablinks" onclick="openTab(event, 'fr')" id="sidetab_aboutfr">Français</button>
-  <button class="sidetablinks" onclick="openTab(event, 'portfolio')" id="sidetab_portfolio">Portfolio</button>
-  <button class="sidetablinks" onclick="openTab(event, 'why')" id="sidetab_why">Why should I work for you?</button>
-  <button class="sidetablinks" onclick="openTab(event, 'hire')" id="sidetab_hire">Hire me!</button>
+  <button class="sidetablinks" onclick="openTab(event, 'en')" id="sidetab_cv_en">English &nbsp;
+  <i class="material-icons" style="">person</i></button>
+  <button class="sidetablinks" onclick="openTab(event, 'fr')" id="sidetab_cv_fr">Français &nbsp;
+  <i class="material-icons" style="">person</i>
+  </button>
+  <button class="sidetablinks" onclick="openTab(event, 'portfolio')" id="sidetab_portfolio">Portfolio &nbsp;
+  <i class="material-icons" style="">folder_special</i>
+  </button>
+  <a href="./calendar.html"><button class="sidetablinks" id="sidetab_calendar">About Calendar &nbsp;
+  <i class="material-icons" style="">today</i>
+  </button></a>
+  <button class="sidetablinks" onclick="openTab(event, 'why')" id="sidetab_why">Why should I work for you?
+  <i class="material-icons" style="">question_answer</i>
+  </button>
+  <button class="sidetablinks" onclick="openTab(event, 'hire')" id="sidetab_hire">Hire me! &nbsp;
+  <i class="material-icons" style="">sentiment_very_satisfied</i>
+  </button>
 </div>
 
 <script>
