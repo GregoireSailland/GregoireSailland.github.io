@@ -3,7 +3,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 * {	font-family:Arial;
@@ -69,23 +68,6 @@ div.tab button:hover {
 div.tab button.active{
     background-color: #f5fdff;
 }
-div.tab a { 
-	text-decoration:none;
-	color:black;
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-div.tab a:hover {
-    background-color: #91e9ff;
-}
-div.tab a.active{
-    background-color: #f5fdff;
-}
 .tabcontent {
 	background-color:white;
 	max-width:21cm;
@@ -107,30 +89,30 @@ div.tab a.active{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-.card { text-decoration:none; display:inline-block;vertical-align:top;
+.pfcard { text-decoration:none; display:inline-block;vertical-align:top;
     box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
     transition: 0.6s;
     border-radius: 5px; 
 	margin:20px;
 }
-.card:hover {
+.pfcard:hover {
     box-shadow: 2px 4px 12px 6px rgba(145,233,255,0.4);
 }
-.container {
+.pfcontainer {
 margin:6px;
 }
-.card img {
+.pfcard img {
     border-radius: 5px 5px 0 0;vertical-align:top;
 }
 .explain{display:inline-block; width:40%;vertical-align:top;}
 .explain p{padding:12px;}
-.container.webbf::before{
+.pfcontainer.webbf::before{
 	content:"wWw";letter-spacing:-8px;font-size:26px;font-weight:bolder;float:left;color:#12aeff;
 	padding:6px;padding-right:14px;
 	background:radial-gradient(circle, #ec652a 0%, #ffff00 65%, #12aeff 66%, #12aeff 69%, white 70%);
 
 }
-.container.androidbf{
+.pfcontainer.androidbf{
 background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Android_robot_2014.svg/200px-Android_robot_2014.svg.png');
 background-size: 68px auto ;
 background-repeat: no-repeat;
@@ -249,7 +231,9 @@ h4 b{font-size:18px;text-align:center;font-weight:bolder;}
 #mySidenav button:hover {
     left: 0; 
 }
-
+.sidetablinks{
+	cursor:pointer;
+}
 /* red #e94234		yellow #fabb04		green #33a752		blue #4184f3*/
 #sidetab_cv_en {
     top: 20px;color: white; 
@@ -279,6 +263,24 @@ h4 b{font-size:18px;text-align:center;font-weight:bolder;}
 }
 #why{text-align:justify;}
 hr{border:0;border-top:1px solid #555;margin:0;height:1px;}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 2px;
+  right: 8px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 24px;
+}#myBtn .material-icons{color:red;}
+
+#myBtn:hover {
+  background-color: red;
+}#myBtn:hover .material-icons{color:black;}
 </style>
 <style media="print">
 body{background-color:white;}
@@ -294,7 +296,7 @@ html{padding-bottom:0px;}
   <button class="tablinks active" onclick="openTab(event, 'en')" id="defaultOpen">English</button>
   <button class="tablinks" onclick="openTab(event, 'fr')">Français</button>
   <button class="tablinks" onclick="openTab(event, 'portfolio')">Portfolio</button>
-   <a class="tablinks" href="./calendar.html">Calendar</a>
+    <button class="tablinks" onclick="openTab(event, 'calendar')">Calendar</button>
   <button class="tablinks" onclick="openTab(event, 'why')">Why should I work for you?</button>
   <button class="tablinks" onclick="openTab(event, 'hire')">Hire me!</button>
 </div>
@@ -575,9 +577,9 @@ html{padding-bottom:0px;}
 </tbody></table>
 </div>
 <div id="portfolio" class="tabcontent">
-	<a class="card" href="https://www.facebook.com/FlyOverlay/" target="_blank">
+	<a class="pfcard" href="https://www.facebook.com/FlyOverlay/" target="_blank">
 	  <img src="./19944620_740977776107772_794588108764893877_o.png" alt="Preview" style="width:100%;height:auto;">
-	  <div class="container androidbf">
+	  <div class="pfcontainer androidbf">
 		<div class="rightinfo">(work in progress) 2017</div>
 		<h4><b>AirView FlyOverlay</b></h4>
 		<p>Free flight navigation Android application </p>
@@ -585,19 +587,19 @@ html{padding-bottom:0px;}
 	  </div>
 
 	</a>
-	<a class="card" href="https://www.facebook.com/PotagerCompagnonnageVegetal/" target="_blank">
+	<a class="pfcard" href="https://www.facebook.com/PotagerCompagnonnageVegetal/" target="_blank">
 	  <img src="./10648654_348173722027530_1413474392065358122_o.jpg" alt="Preview" style="width:100%;height:auto;">
-	  <div class="container webbf">
+	  <div class="pfcontainer webbf">
 		<div class="rightinfo">(offline: no money for server) 2014</div>
 		<h4><b>Potage</b></h4> 
 		<p>Computer assisted gardening planning web application </p> 
 		<p>(Click for details on Facebook page)</p>
 	  </div>
 	</a>
-	<div class="card" target="_blank">
+	<div class="pfcard" target="_blank">
 		<img src="./inscriptions.jpg" alt="Preview" style="width:100%">
 		<div class="rightinfo">(multi user) 2013</div>
-		<div class="container webbf">
+		<div class="pfcontainer webbf">
 			<h4><b>Dynamic Web Calendar</b></h4>
 			<p>Web application to subscribe for lessons at a paragliding school</p>
 			<p>I designed that application for a paragliding school in order 
@@ -607,13 +609,13 @@ places and for teatchers to manage there resources.</p>
 			<p>The design is not really good because I did it a long time ago at 
 my begining of studies and the purpose was more the usability and the 
 original purpose.</p>
-			<p>Today I could do really better work.<br>
-			see exemple here:<a href="./calendar.html"><button class="sidetablinks"style="padding:6px;" id="sidetab_calendar">Calendar &nbsp;
+			<p>Today I could do really better work.</p>
+			Please try my exemple here : <a href="./calendar.html" target="_blank"><button class="sidetablinks" style="padding:6px;border-radius: 6px;" id="sidetab_calendar">Calendar &nbsp;
   <i class="material-icons" style="vertical-align:middle;">today</i>
-  </button></a></p>
+  </button></a>
 	  </div>
 	</div>
-	<div class="card" target="_blank">
+	<div class="pfcard" target="_blank">
 		  <img src="./Alive%2520Lauuncher.png" alt="Preview" style="width:50%;height:auto;">
 		  <div class="explain">
 			<p>⇵ pitch tilt of the device scrolls folders vertically</p> 
@@ -625,33 +627,38 @@ original purpose.</p>
 				By maintaining an icone you can move it between folders while scrolling by tilting the device
 			</p> 
 		  </div>
-		  <div class="container androidbf">
+		  <div class="pfcontainer androidbf">
 			<div class="rightinfo">(work in progress) 2016</div>
 			<h4><b>Alive Lauuncher</b></h4> 
 			<p>Original Android applications launcher using sensors to scroll icones without toutching the screen</p> 
 		  </div>
 	</div>
-	<div class="card" target="_blank">
+	<div class="pfcard" target="_blank">
 		<img src="./gebco.png" alt="Preview" style="width:100%">
-		<div class="container androidbf">
+		<div class="pfcontainer androidbf">
 			<div class="rightinfo">(for map application) 2017</div>
 			<h4><b>Big image tiler</b></h4>
 			<p>Android application to convert big images to small tiles</p> 
+			<p>dark is low elevation, white is higher altitude.
+			<br>
+			Created for my project of augmented reality airspace renderer (<a href="https://www.facebook.com/FlyOverlay/">facebook.com/FlyOverlay</a>).</p>
 		</div>
 	</div>
 </div>
 
 <div id="calendar" class="tabcontent">
-	
-	
-	
-	
-	
+<p>Google Calendar idea exemple</p>
+<p>I will try to give you here a quick exemple of the work I can accomplish for the Calendar application</p>
+<p>I really like to use google calendar both on my android device and computer.</p>
+<p>I think it could be greatly improved in particular about new events creations.</p>
+<p>On web side, a more responsive design could improve readability and give a more beautifull rendering.</p><br>
+here is my exemple : <a href="./calendar.html" target="_blank"><button class="sidetablinks" style="padding:6px;border-radius: 6px;" id="sidetab_calendar">Calendar &nbsp;
+  <i class="material-icons" style="vertical-align:middle;">today</i>
+  </button></a>
+<img src="./design01.jpg" style="width:100%;">
 </div>
 
 <div id="why" class="tabcontent" style="padding:20px;">
-<p>Google Calendar idea exemple</p>
-<img src="./design01.jpg" style="width:100%;">
 <p>More about me</p><br><br>
 
 
@@ -757,9 +764,9 @@ In each of my development projects, there is a bit of the waiter, a bit of the p
   <button class="sidetablinks" onclick="openTab(event, 'portfolio')" id="sidetab_portfolio">Portfolio &nbsp;
   <i class="material-icons" style="">folder_special</i>
   </button>
-  <a href="./calendar.html"><button class="sidetablinks" id="sidetab_calendar">About Calendar &nbsp;
+  <button class="sidetablinks" onclick="openTab(event, 'calendar')" id="sidetab_calendar">About Calendar &nbsp;
   <i class="material-icons" style="">today</i>
-  </button></a>
+  </button>
   <button class="sidetablinks" onclick="openTab(event, 'why')" id="sidetab_why">Why should I work for you?
   <i class="material-icons" style="">question_answer</i>
   </button>
@@ -767,7 +774,7 @@ In each of my development projects, there is a bit of the waiter, a bit of the p
   <i class="material-icons" style="">sentiment_very_satisfied</i>
   </button>
 </div>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="material-icons">change_history</div></button>
 <script>
 function openTab(evt, cnt) {
     var i, tabcontent, tablinks;
@@ -785,8 +792,21 @@ function openTab(evt, cnt) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-</script>
-<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 function loadit() {
 	var link;
     var links=document.getElementsByTagName("a");
