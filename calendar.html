@@ -125,9 +125,9 @@ dayname{
 /* Add media queries for smaller screens */
 
 @media screen and (max-width:960px) {
-    .weekdays{display:none;}
 	.days li{width:25%;padding-top:25%;}
 	dayname{display:block;}
+	.weekdays,li.prevm,li.nextm{display:none;}
 }
 @media screen and (max-width:720px) {
 	.days li{width:50%;padding-top:50%;}
@@ -137,9 +137,6 @@ dayname{
     .days li{width:100%;padding-top:50%;}
 }
 
-@media screen and (max-width: 290px) {
-    
-}
 /*todo:  li border collapse*/
 
 /* The Modal (background) */
