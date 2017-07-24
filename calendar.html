@@ -86,17 +86,18 @@ body {font-family: Verdana,sans-serif;}
     background: #eee;
     margin: 0;
 	/*border:1px solid red;*/
+	border:1px solid black;
 	border-collapse:collapse;
 }
 .days li {border-collapse:collapse;
 	position:relative;
-	border:1px solid blue;
+	border:2px solid black;
     list-style-type: none;
     display: inline-block;
     width: 14.285714285714285714285714285714%;
 	padding-top:14.285714285714285714285714285714%;
     font-size:12px;
-    color: #777;
+    color: black;
 }
 .days li content{position:absolute;width:100%;height:100%;left:0px;top:0px;}
 busy{position:absolute;width:100%;min-width:100%;height:100%;min-height:100%;left:0px;top:0px;}
@@ -116,6 +117,7 @@ daynumber{
 	top:0px;
 	padding:5px;
 	min-width:25px;
+	border-radius:0 0 0 8px;
 }
 
 daynumber.active {
@@ -125,8 +127,8 @@ daynumber.active {
 }
 .prevm, .nextm{
 	background-color:lightgrey;
-	opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
+	opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
 	}
 
 /* Add media queries for smaller screens */
