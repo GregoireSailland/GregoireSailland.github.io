@@ -245,7 +245,12 @@ dayinfo dayname{
     from {opacity: 0} 
     to {opacity: 1}
 }
-
+.noselect{
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+	}
 </style>
 </head>
 <body>
@@ -268,9 +273,9 @@ especially for adding new events. It's not enough intuitive.<br>
 		<li class="next">&#10095;</li>
 		<li style="text-align:center">
 		  August<br>
-			<span class="prevyear" onclick="prevyear()">&#10094;</span>
+			<span class="prevyear noselect" onclick="return prevyear()">&#10094;</span>
 			<span id="year" class="year"style="font-size:18px">2017</span>
-			<span class="nextyear" onclick="nextyear()">&#10095;</span>
+			<span class="nextyear noselect" onclick="return nextyear()">&#10095;</span>
 		</li>
 	  </ul>
 	</div>
@@ -427,9 +432,11 @@ function isElement(obj) {
 }
 function prevyear(){
 	document.getElementById("year").innerHTML=parseInt(document.getElementById("year").innerHTML)-1;
+	return false;
 }
 function nextyear(){
 	document.getElementById("year").innerHTML=parseInt(document.getElementById("year").innerHTML)+1;
+	return false;
 }
 
 </script>
